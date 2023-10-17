@@ -116,3 +116,14 @@ Sub イベント制御()
         Case True: Application.EnableEvents = False: MsgBox "自動処理機能をOFFに切り替えました"
     End Select
 End Sub
+Sub 図形表示切替(シート名 As String, 図形オブジェクト名 As String)
+    With Sheets(シート名)
+        With .Shapes(図形オブジェクト名)
+            Select Case .Visible
+                Case True: .Visible = False
+                Case False: .Visible = True
+            End Select
+        End With
+    End With
+End Sub
+

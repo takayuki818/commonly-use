@@ -1,6 +1,8 @@
-# commonly-use
+# Name
+よく使うコードまとめ
+# Overview
 ExcelVBAのコーディングでよく使う雑多なコードをまとめていきます（随時更新）
-
+# Description
 ・最下行最右列取得  
 ・配列貼付
 ・保護切替  

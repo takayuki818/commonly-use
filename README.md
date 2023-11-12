@@ -1,5 +1,5 @@
 # Name
-よく使うコードまとめ
+よく使うコード.bas
 # Overview
 ExcelVBAのコーディングでよく使う雑多なコードをまとめていきます（随時更新）
 # Description

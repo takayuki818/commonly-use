@@ -1,125 +1,140 @@
-Attribute VB_Name = "ã‚ˆãä½¿ã†"
+Attribute VB_Name = "‚æ‚­g‚¤ƒR[ƒh"
 Option Explicit
-Sub æœ€ä¸‹è¡Œæœ€å³åˆ—å–å¾—()
-    Dim æœ€ä¸‹è¡Œ As Long, æœ€å³åˆ— As Long
+Sub Å‰ºsÅ‰E—ñæ“¾()
+    Dim Å‰ºs As Long, Å‰E—ñ As Long
     With ActiveSheet
-        æœ€ä¸‹è¡Œ = .Cells(Rows.Count, 1).End(xlUp).Row
-        æœ€å³åˆ— = .Cells(1, Columns.Count).End(xlToLeft).Column
+        Å‰ºs = .Cells(Rows.Count, 1).End(xlUp).Row
+        Å‰E—ñ = .Cells(1, Columns.Count).End(xlToLeft).Column
     End With
 End Sub
-Sub é…åˆ—è²¼ä»˜()
-    Dim é…åˆ—(1 To 3, 1 To 3)
+Sub ”z—ñ“\•t()
+    Dim ”z—ñ(1 To 3, 1 To 3)
     With ActiveSheet
-        Range(.Cells(1, 1), .Cells(3, 3)) = é…åˆ—
+        Range(.Cells(1, 1), .Cells(3, 3)) = ”z—ñ
     End With
 End Sub
-Sub ä¿è­·åˆ‡æ›¿()
+Sub •ÛŒìØ‘Ö()
     With ActiveSheet
         Select Case .ProtectContents
-            Case True: .Unprotect: MsgBox "ã‚·ãƒ¼ãƒˆä¿è­·ã‚’è§£é™¤ã—ã¾ã—ãŸ"
-            Case False: .Protect: MsgBox "ã‚·ãƒ¼ãƒˆã‚’ä¿è­·ã—ã¾ã—ãŸ"
+            Case True: .Unprotect: MsgBox "ƒV[ƒg•ÛŒì‚ğ‰ğœ‚µ‚Ü‚µ‚½"
+            Case False: .Protect: MsgBox "ƒV[ƒg‚ğ•ÛŒì‚µ‚Ü‚µ‚½"
         End Select
     End With
 End Sub
-Sub å…¨ã‚·ãƒ¼ãƒˆå±•é–‹(ã‚·ãƒ¼ãƒˆå As String)
-    Dim ã‚·ãƒ¼ãƒˆ As Worksheet
+Sub ‘SƒV[ƒg“WŠJ(ƒV[ƒg–¼ As String)
+    Dim ƒV[ƒg As Worksheet
     Application.ScreenUpdating = False
-    For Each ã‚·ãƒ¼ãƒˆ In Sheets
-        ã‚·ãƒ¼ãƒˆ.Visible = True
+    For Each ƒV[ƒg In Sheets
+        ƒV[ƒg.Visible = True
     Next
-    Sheets(ã‚·ãƒ¼ãƒˆå).Activate
+    Sheets(ƒV[ƒg–¼).Activate
     Application.ScreenUpdating = True
 End Sub
-Sub å…¨ã‚·ãƒ¼ãƒˆéè¡¨ç¤º(ã‚·ãƒ¼ãƒˆå As String)
-    Dim ã‚·ãƒ¼ãƒˆ As Worksheet
+Sub ‘SƒV[ƒg”ñ•\¦(ƒV[ƒg–¼ As String)
+    Dim ƒV[ƒg As Worksheet
     Application.ScreenUpdating = False
-    Sheets(ã‚·ãƒ¼ãƒˆå).Visible = True
-    For Each ã‚·ãƒ¼ãƒˆ In Sheets
-        If ã‚·ãƒ¼ãƒˆ.Name <> ã‚·ãƒ¼ãƒˆå Then ã‚·ãƒ¼ãƒˆ.Visible = False
+    Sheets(ƒV[ƒg–¼).Visible = True
+    For Each ƒV[ƒg In Sheets
+        If ƒV[ƒg.Name <> ƒV[ƒg–¼ Then ƒV[ƒg.Visible = False
     Next
     Application.ScreenUpdating = True
 End Sub
-Sub å‡¦ç†æ™‚é–“è¨ˆæ¸¬()
-    Dim å§‹æ™‚ As Date, çµ‚æ™‚ As Date
-    å§‹æ™‚ = Timer
-    å®Ÿè¡Œä¸­.Show vbModeless
-    å®Ÿè¡Œä¸­.Repaint
+Sub ˆ—ŠÔŒv‘ª()
+    Dim n As Date
+    n = Timer
+    Às’†.Show vbModeless
+    Às’†.Repaint
     
-    çµ‚æ™‚ = Timer
-    MsgBox "å‡¦ç†ãŒå®Œäº†ã—ã¾ã—ãŸ" & vbCrLf & vbCrLf & "å‡¦ç†æ™‚é–“ï¼š" & çµ‚æ™‚ - å§‹æ™‚
-    Unload å®Ÿè¡Œä¸­
+    MsgBox "ˆ—‚ªŠ®—¹‚µ‚Ü‚µ‚½" & vbCrLf & vbCrLf & "ˆ—ŠÔF" & Now - n
+    Unload Às’†
 End Sub
-Sub ä¸¦æ›¿åŸºæœ¬å½¢ã¨ã‚«ãƒŠå‰Šé™¤()
-    Dim æœ€ä¸‹è¡Œ, æœ€å³åˆ— As Long
+Sub •À‘ÖŠî–{Œ`‚ÆƒJƒiíœ()
+    Dim Å‰ºs, Å‰E—ñ As Long
     With ActiveSheet
-        æœ€ä¸‹è¡Œ = .Cells(Rows.Count, 1).End(xlUp).Row
-        æœ€å³åˆ— = .Cells(1, Columns.Count).End(xlToLeft).Column
-        .Range(Cells(1, 1), Cells(æœ€ä¸‹è¡Œ, æœ€å³åˆ—)).Characters.PhoneticCharacters = ""
-        If æœ€ä¸‹è¡Œ < 2 Then Exit Sub
+        Å‰ºs = .Cells(Rows.Count, 1).End(xlUp).Row
+        Å‰E—ñ = .Cells(1, Columns.Count).End(xlToLeft).Column
+        .Range(Cells(1, 1), Cells(Å‰ºs, Å‰E—ñ)).Characters.PhoneticCharacters = ""
+        If Å‰ºs < 2 Then Exit Sub
         With .Sort
             With .SortFields
                 .Clear
                 .Add Key:=Range("A1"), Order:=xlAscending
                 .Add Key:=Range("B1"), Order:=xlDescending
             End With
-            .SetRange Range(Cells(1, 1), Cells(æœ€ä¸‹è¡Œ, æœ€å³åˆ—))
+            .SetRange Range(Cells(1, 1), Cells(Å‰ºs, Å‰E—ñ))
             .Header = xlYes
             .Apply
         End With
     End With
 End Sub
-Sub ãƒ‡ãƒ¼ã‚¿ã¨ç½«ç·šã‚¯ãƒªã‚¢(ã‚·ãƒ¼ãƒˆå As String)
-    With Sheets(ã‚·ãƒ¼ãƒˆå)
+Sub ƒf[ƒ^‚ÆŒrüƒNƒŠƒA(ƒV[ƒg–¼ As String)
+    With Sheets(ƒV[ƒg–¼)
         Range(.Cells(1, 1), .Cells(Rows.Count, Columns.Count)).ClearContents
         Range(.Cells(1, 1), .Cells(Rows.Count, Columns.Count)).Borders.LineStyle = False
     End With
-    MsgBox "ã€Œ" & ã‚·ãƒ¼ãƒˆå & "ã€ã‚·ãƒ¼ãƒˆã®å†…å®¹ã‚’ã‚¯ãƒªã‚¢ã—ã¾ã—ãŸ"
+    MsgBox "u" & ƒV[ƒg–¼ & "vƒV[ƒg‚Ì“à—e‚ğƒNƒŠƒA‚µ‚Ü‚µ‚½"
 End Sub
-Sub PDFå‡ºåŠ›(ãƒ•ã‚©ãƒ«ãƒ€å As String, ãƒ•ã‚¡ã‚¤ãƒ«å As String, ã‚·ãƒ¼ãƒˆå As String)
-    ãƒ•ã‚©ãƒ«ãƒ€å = ThisWorkbook.Path & "\" & ãƒ•ã‚©ãƒ«ãƒ€å
-    If Dir(ãƒ•ã‚©ãƒ«ãƒ€å, vbDirectory) = "" Then MkDir ãƒ•ã‚©ãƒ«ãƒ€å
-    With Sheets(ã‚·ãƒ¼ãƒˆå)
-        .ExportAsFixedFormat Type:=xlTypePDF, Filename:=ãƒ•ã‚©ãƒ«ãƒ€å & "\" & ãƒ•ã‚¡ã‚¤ãƒ«å & ".pdf"
-        MsgBox "ãƒ•ã‚¡ã‚¤ãƒ«åï¼š" & ãƒ•ã‚¡ã‚¤ãƒ«å & ".pdf" & vbCrLf & vbCrLf & "PDFå‡ºåŠ›ãŒå®Œäº†ã—ã¾ã—ãŸï¼ˆæœ¬ãƒ„ãƒ¼ãƒ«åŒéšå±¤ãƒ»ã€Œ" & ãƒ•ã‚©ãƒ«ãƒ€å & "ã€ãƒ•ã‚©ãƒ«ãƒ€å†…ï¼‰"
+Sub PDFo—Í(ƒtƒHƒ‹ƒ_–¼ As String, ƒtƒ@ƒCƒ‹–¼ As String, ƒV[ƒg–¼ As String)
+    ƒtƒHƒ‹ƒ_–¼ = ThisWorkbook.Path & "\" & ƒtƒHƒ‹ƒ_–¼
+    If Dir(ƒtƒHƒ‹ƒ_–¼, vbDirectory) = "" Then MkDir ƒtƒHƒ‹ƒ_–¼
+    With Sheets(ƒV[ƒg–¼)
+        .ExportAsFixedFormat Type:=xlTypePDF, Filename:=ƒtƒHƒ‹ƒ_–¼ & "\" & ƒtƒ@ƒCƒ‹–¼ & ".pdf"
+        MsgBox "ƒtƒ@ƒCƒ‹–¼F" & ƒtƒ@ƒCƒ‹–¼ & ".pdf" & vbCrLf & vbCrLf & "PDFo—Í‚ªŠ®—¹‚µ‚Ü‚µ‚½i–{ƒc[ƒ‹“¯ŠK‘wEu" & ƒtƒHƒ‹ƒ_–¼ & "vƒtƒHƒ‹ƒ_“àj"
     End With
 End Sub
-Sub æ¡ä»¶ä»˜æ›¸å¼ç­‰è¨­å®šä¾‹()
-    Dim æ¡ä»¶ As FormatCondition
+Sub ğŒ•t‘®“™İ’è—á()
+    Dim ğŒ As FormatCondition
     With ActiveSheet
         .Range("A1:D4").Borders.LineStyle = True
         .Cells.FormatConditions.Delete
-        Set æ¡ä»¶ = .Range("A1:D4").FormatConditions.Add(Type:=xlExpression, Formula1:="=A1=0")
-        æ¡ä»¶.Font.Color = RGB(255, 0, 0)
-        Set æ¡ä»¶ = .Range("A1:D4").FormatConditions.Add(Type:=xlExpression, Formula1:="=A1=1")
-        æ¡ä»¶.Interior.Color = RGB(252, 228, 214)
+        Set ğŒ = .Range("A1:D4").FormatConditions.Add(Type:=xlExpression, Formula1:="=A1=0")
+        ğŒ.Font.Color = RGB(255, 0, 0)
+        Set ğŒ = .Range("A1:D4").FormatConditions.Add(Type:=xlExpression, Formula1:="=A1=1")
+        ğŒ.Interior.Color = RGB(252, 228, 214)
     End With
 End Sub
-Sub ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ãƒ†ã‚­ã‚¹ãƒˆå‡ºåŠ›(ãƒ‡ãƒ¼ã‚¿)
-    Dim ãƒ•ã‚¡ã‚¤ãƒ«å
-    ãƒ•ã‚¡ã‚¤ãƒ«å = ThisWorkbook.Path & "\BU.txt"
-    Open ãƒ•ã‚¡ã‚¤ãƒ«å For Append As #1
-    Print #1, ãƒ‡ãƒ¼ã‚¿
+Sub ƒŠƒXƒg‚É‚æ‚é“ü—Í‹K‘¥İ’è(ƒŠƒXƒg)
+'256šˆÈã‚Ì•¶š—ñŒ`®‚ÅƒŠƒXƒgŒ`®‚Ì“ü—Í‹K‘¥İ’è‚·‚é‚Æƒtƒ@ƒCƒ‹‚ª”j‘¹‚·‚é‚±‚Æ‚É’ˆÓI
+'¨@–{—á‚Å‚ÍƒŠƒXƒgİ’èƒZƒ‹QÆŒ`®‚É‚·‚é‚±‚Æ‚Åƒtƒ@ƒCƒ‹”j‘¹‚ğ‰ñ”ğ‚µ‚Ä‚¢‚Ü‚·
+    Dim ”ÍˆÍ® As String
+    With Sheets("ƒvƒ‹ƒ_ƒEƒ“İ’è")
+        .Cells(1, 1).Resize(Rows.Count, 1).ClearContents
+        .Cells(1, 1).Resize(UBound(ƒŠƒXƒg), 1) = ƒŠƒXƒg
+        ”ÍˆÍ® = "=ƒvƒ‹ƒ_ƒEƒ“İ’è!$A$1:$A$" & UBound(ƒŠƒXƒg)
+    End With
+    With Sheets("“ü—ÍƒtƒH[ƒ€")
+        With .Cells(1, 1).Validation
+            .Delete
+            .Add Type:=xlValidateList, Formula1:=”ÍˆÍ®
+        End With
+    End With
+End Sub
+Sub ƒoƒbƒNƒAƒbƒvƒeƒLƒXƒgo—Í(ƒf[ƒ^)
+    Dim ƒtƒ@ƒCƒ‹–¼
+    ƒtƒ@ƒCƒ‹–¼ = ThisWorkbook.Path & "\BU.txt"
+    Open ƒtƒ@ƒCƒ‹–¼ For Append As #1
+    Print #1, ƒf[ƒ^
     Close #1
 End Sub
-Sub æ¤œç´¢ãƒ€ã‚¤ã‚¢ãƒ­ã‚°å±•é–‹()
+Sub ŒŸõƒ_ƒCƒAƒƒO“WŠJ()
     Application.CommandBars.FindControl(ID:=1849).Execute
 End Sub
-Sub Enteræ–¹å‘åˆ‡æ›¿()
+Sub Enter•ûŒüØ‘Ö()
     Application.MoveAfterReturn = True
     Select Case Application.MoveAfterReturnDirection
         Case xlToRight: Application.MoveAfterReturnDirection = xlDown
         Case xlDown: Application.MoveAfterReturnDirection = xlToRight
     End Select
 End Sub
-Sub ã‚¤ãƒ™ãƒ³ãƒˆåˆ¶å¾¡()
+Sub ƒCƒxƒ“ƒg§Œä()
     Select Case Application.EnableEvents
-        Case False: Application.EnableEvents = True: MsgBox "è‡ªå‹•å‡¦ç†æ©Ÿèƒ½ã‚’ONã«åˆ‡ã‚Šæ›¿ãˆã¾ã—ãŸ"
-        Case True: Application.EnableEvents = False: MsgBox "è‡ªå‹•å‡¦ç†æ©Ÿèƒ½ã‚’OFFã«åˆ‡ã‚Šæ›¿ãˆã¾ã—ãŸ"
+        Case False: Application.EnableEvents = True: MsgBox "©“®ˆ—‹@”\‚ğON‚ÉØ‚è‘Ö‚¦‚Ü‚µ‚½"
+        Case True: Application.EnableEvents = False: MsgBox "©“®ˆ—‹@”\‚ğOFF‚ÉØ‚è‘Ö‚¦‚Ü‚µ‚½"
     End Select
 End Sub
-Sub å›³å½¢è¡¨ç¤ºåˆ‡æ›¿(ã‚·ãƒ¼ãƒˆå As String, å›³å½¢ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå As String)
-    With Sheets(ã‚·ãƒ¼ãƒˆå)
-        With .Shapes(å›³å½¢ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå)
+Sub }Œ`•\¦Ø‘Ö(ƒV[ƒg–¼ As String, }Œ`ƒIƒuƒWƒFƒNƒg–¼ As String)
+    With Sheets(ƒV[ƒg–¼)
+        With .Shapes(}Œ`ƒIƒuƒWƒFƒNƒg–¼)
             Select Case .Visible
                 Case True: .Visible = False
                 Case False: .Visible = True
